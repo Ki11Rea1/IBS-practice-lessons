@@ -1,0 +1,256 @@
+body {
+  margin: 0px;
+  font-family: "Roboto", sans-serif;
+}
+
+.header {
+  display: flex;
+  height: 40px;
+  margin: 16px 24px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header .searchField {
+  display: flex;
+  align-items: center;
+  width: 300px;
+  height: 40px;
+}
+
+.header .searchField:hover {
+  transition: 0.5s background-color;
+  background: #f2f2f2;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.15);
+}
+
+.header .searchIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+}
+
+.header .searchInput {
+  margin-left: 8px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+}
+
+.header .navIcons {
+  display: flex;
+}
+
+.header .navIcons * {
+  display: flex;
+  width: 20px;
+  height: 20px;
+}
+
+.header .navIcons .cart:hover {
+  transition: 0.5s background-color;
+  background: #dfdfdf;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.15);
+  border-radius: 2px;
+}
+
+.header .navIcons .account:hover {
+  transition: 0.5s background-color;
+  background: #dfdfdf;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.15);
+  border-radius: 2px;
+}
+
+.header .navIcons .cart {
+  justify-content: center;
+  align-items: center;
+  width: 24px;
+  height: 24px;
+}
+
+.header .navIcons .account {
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  margin-left: 16px;
+}
+
+.catalog {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 0px 16px 0px;
+}
+
+.item {
+  flex: 0 0 220px;
+  height: 272px;
+  margin: 8px;
+  border-radius: 10px;
+}
+
+.item .favorite {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  height: 24px;
+  padding: 8px 8px 0px 0px;
+}
+
+.item .info * {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.item .info .photo {
+  justify-content: center;
+  margin-top: 8px;
+  height: 140px;
+}
+
+.item .info .photo img {
+  width: 59px;
+}
+
+.item .info .name {
+  justify-content: center;
+  height: 40px;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
+}
+
+.item .info .price {
+  justify-content: center;
+  height: 20px;
+  text-align: center;
+}
+
+.item:hover {
+  transition: 0.5s background-color;
+  background: #f2f2f2;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.15);
+}
+
+/*####################################################################*/
+
+.details {
+  display: flex;
+  background-color: bisque;
+  padding-top: 8px;
+  margin: 0px 24px;
+}
+
+.details .photo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 300px;
+  height: 300px;
+  background-color: aquamarine;
+  flex-shrink: 0;
+}
+
+.details .info {
+  background-color: aqua;
+  margin-left: 16px;
+}
+
+.details .info .name1 {
+  margin: 0 0 16px;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 28px;
+}
+.details .info .name2 {
+  margin: 24px 0 16px;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 21px;
+}
+
+.details .info .description {
+  margin: 0;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+}
+
+.details .price {
+  background-color: gold;
+  display: flex;
+  align-items: center;
+  margin-top: 24px;
+  height: 40px;
+}
+
+.details .price p {
+  margin: 0 16px 0 0;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 42px;
+  color: #e97f03;
+}
+
+.details .price .count {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 40px;
+  width: 180px;
+  border: 1px solid #323232;
+  margin-right: 16px;
+}
+
+.details .price .count .differ {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border: 1px solid #323232;
+}
+
+.details .price .count .ammount {
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 28px;
+}
+
+.details .price button {
+  height: 40px;
+  width: 160px;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 28px;
+  color: white;
+  background: #e97f03;
+  border-radius: 10px;
+  border: 0px;
+  margin-right: 16px;
+}
+
+.details .price .favorite {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 24px;
+  width: 24px;
+}
+
+.details .price button:hover {
+  transition: 0.5s background-color;
+  background: #680091;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.15);
+}
+
+@media (max-width: 550px) {
+  .item {
+    flex: 0 0 155px;
+  }
+}
