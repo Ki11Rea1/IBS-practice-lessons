@@ -141,7 +141,6 @@ body {
 
 .details {
   display: flex;
-  background-color: bisque;
   padding-top: 8px;
   margin: 0px 24px;
 }
@@ -152,12 +151,11 @@ body {
   justify-content: center;
   width: 300px;
   height: 300px;
-  background-color: aquamarine;
   flex-shrink: 0;
+  border: 1px solid #f2f2f2;
 }
 
 .details .info {
-  background-color: aqua;
   margin-left: 16px;
 }
 
@@ -182,7 +180,6 @@ body {
 }
 
 .details .price {
-  background-color: gold;
   display: flex;
   align-items: center;
   margin-top: 24px;
@@ -194,7 +191,19 @@ body {
   font-weight: 400;
   font-size: 36px;
   line-height: 42px;
+  height: 40px;
   color: #e97f03;
+}
+
+.details .price .pr_co {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.details .price .fav_b {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap-reverse;
 }
 
 .details .price .count {
@@ -205,6 +214,7 @@ body {
   width: 180px;
   border: 1px solid #323232;
   margin-right: 16px;
+  box-sizing: border-box;
 }
 
 .details .price .count .differ {
@@ -214,6 +224,7 @@ body {
   width: 40px;
   height: 40px;
   border: 1px solid #323232;
+  border-style: none solid;
 }
 
 .details .price .count .ammount {
@@ -249,8 +260,85 @@ body {
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.15);
 }
 
+@media (max-width: 850px) {
+  .details {
+    flex-direction: column;
+    margin: 0px;
+  }
+
+  .details .photo {
+    align-self: center;
+    transition: 0.5s width;
+    box-sizing: border-box;
+    margin: 16px 0px;
+    width: 375px;
+    height: 200px;
+    border: 0px;
+    background: linear-gradient(
+      360deg,
+      rgba(0, 0, 0, 0.15) 0%,
+      rgba(0, 0, 0, 0) 50%
+    );
+  }
+
+  .details .photo img {
+    height: 168px;
+  }
+
+  .details .info {
+    margin: 0px 24px;
+  }
+
+  .details .info .name2 {
+    margin-top: 16px;
+  }
+
+  .details .price {
+    justify-content: space-between;
+  }
+
+  .details .price .pr_co {
+    box-sizing: border-box;
+  }
+
+  .details .price .fav_b {
+    height: 98px;
+    box-sizing: border-box;
+  }
+
+  .details .price .count {
+    width: 140px;
+  }
+}
+
 @media (max-width: 550px) {
   .item {
     flex: 0 0 155px;
+  }
+
+  .details .price {
+    height: 96px;
+    margin-top: 16px;
+  }
+}
+
+@media (max-width: 500px) {
+  .details .price .fav_b {
+    justify-content: end;
+    align-items: flex-start;
+  }
+
+  .details .price .favorite {
+    align-items: center;
+    margin: 0px;
+  }
+
+  .details .price .count {
+    margin-top: 16px;
+  }
+
+  .details .price button {
+    margin-top: 24px;
+    margin-right: 0px;
   }
 }
