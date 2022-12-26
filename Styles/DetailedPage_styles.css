@@ -18,13 +18,13 @@
   margin-left: 16px;
 }
 
-.details .info .name1 {
+.details .info .title {
   margin: 0 0 16px;
   font-weight: 700;
   font-size: 24px;
   line-height: 28px;
 }
-.details .info .name2 {
+.details .info .subtitle {
   margin: 24px 0 16px;
   font-weight: 700;
   font-size: 18px;
@@ -54,12 +54,12 @@
   color: var(--orange-color);
 }
 
-.details .price .pr_co {
+.details .price .left-half {
   display: flex;
   flex-wrap: wrap;
 }
 
-.details .price .fav_b {
+.details .price .right-half {
   display: flex;
   align-items: center;
   flex-wrap: wrap-reverse;
@@ -148,7 +148,7 @@
     margin: 0px 24px;
   }
 
-  .details .info .name2 {
+  .details .info .subtitle {
     margin-top: 16px;
   }
 
@@ -156,11 +156,11 @@
     justify-content: space-between;
   }
 
-  .details .price .pr_co {
+  .details .price .left-half {
     box-sizing: border-box;
   }
 
-  .details .price .fav_b {
+  .details .price .right-half {
     height: 98px;
     box-sizing: border-box;
   }
@@ -178,7 +178,7 @@
 }
 
 @media (max-width: 500px) {
-  .details .price .fav_b {
+  .details .price .right-half {
     justify-content: end;
     align-items: flex-start;
   }
