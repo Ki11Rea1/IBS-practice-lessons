@@ -1,0 +1,200 @@
+.details {
+  display: flex;
+  padding-top: 8px;
+  margin: 0px 24px;
+}
+
+.details .photo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 300px;
+  height: 300px;
+  flex-shrink: 0;
+  border: 1px solid var(--bg-color);
+}
+
+.details .info {
+  margin-left: 16px;
+}
+
+.details .info__title {
+  margin: 0 0 16px;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 28px;
+}
+.details .info__subtitle {
+  margin: 24px 0 16px;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 21px;
+}
+
+.details .info__description {
+  margin: 0;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+}
+
+.details .price {
+  display: flex;
+  align-items: center;
+  margin-top: 24px;
+  height: 40px;
+}
+
+.details .price__summ {
+  margin: 0 16px 0 0;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 42px;
+  height: 40px;
+  color: var(--orange-color);
+}
+
+.details .price__left-half {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.details .price__right-half {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap-reverse;
+}
+
+.details .price__count {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 40px;
+  width: 180px;
+  border: 1px solid var(--border-color);
+  margin-right: 16px;
+  box-sizing: border-box;
+}
+
+.details .price__differ {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border: 1px solid var(--border-color);
+  border-style: none solid;
+}
+
+.details .price__ammount {
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 28px;
+}
+
+.details .price button {
+  height: 40px;
+  width: 160px;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 28px;
+  color: var(--bg-color);
+  background: var(--orange-color);
+  border-radius: 10px;
+  border: 0px;
+  margin-right: 16px;
+}
+
+.details .price__favorite {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 24px;
+  width: 24px;
+}
+
+.details .price button:hover {
+  transition: 0.5s background-color;
+  background: #680091;
+  box-shadow: 2px 2px 5px var(--shadow-color);
+}
+
+@media (max-width: 850px) {
+  .details {
+    flex-direction: column;
+    margin: 0px;
+    padding: 0px;
+  }
+
+  .details .photo {
+    align-self: center;
+    transition: 0.5s width;
+    box-sizing: border-box;
+    margin: 0px 0px 16px;
+    width: 375px;
+    height: 200px;
+    border: 0px;
+    background: linear-gradient(
+      360deg,
+      rgba(0, 0, 0, 0.15) 0%,
+      rgba(0, 0, 0, 0) 50%
+    );
+  }
+
+  .details .photo img {
+    height: 168px;
+  }
+
+  .details .info {
+    margin: 0px 24px;
+  }
+
+  .details .info__subtitle {
+    margin-top: 16px;
+  }
+
+  .details .price {
+    justify-content: space-between;
+  }
+
+  .details .price__left-half {
+    box-sizing: border-box;
+  }
+
+  .details .price__right-half {
+    height: 98px;
+    box-sizing: border-box;
+  }
+
+  .details .price__count {
+    width: 140px;
+  }
+}
+
+@media (max-width: 550px) {
+  .details .price {
+    height: 96px;
+    margin-top: 16px;
+  }
+}
+
+@media (max-width: 500px) {
+  .details .price__right-half {
+    justify-content: end;
+    align-items: flex-start;
+  }
+
+  .details .price__favorite {
+    align-items: center;
+    margin: 0px;
+  }
+
+  .details .price__count {
+    margin-top: 16px;
+  }
+
+  .details .price button {
+    margin-top: 24px;
+    margin-right: 0px;
+  }
+}
