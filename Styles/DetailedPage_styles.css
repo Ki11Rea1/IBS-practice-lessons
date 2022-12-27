@@ -18,20 +18,20 @@
   margin-left: 16px;
 }
 
-.details .info .title {
+.details .info__title {
   margin: 0 0 16px;
   font-weight: 700;
   font-size: 24px;
   line-height: 28px;
 }
-.details .info .subtitle {
+.details .info__subtitle {
   margin: 24px 0 16px;
   font-weight: 700;
   font-size: 18px;
   line-height: 21px;
 }
 
-.details .info .description {
+.details .info__description {
   margin: 0;
   font-weight: 400;
   font-size: 14px;
@@ -45,7 +45,7 @@
   height: 40px;
 }
 
-.details .price p {
+.details .price__summ {
   margin: 0 16px 0 0;
   font-weight: 400;
   font-size: 36px;
@@ -54,18 +54,18 @@
   color: var(--orange-color);
 }
 
-.details .price .left-half {
+.details .price__left-half {
   display: flex;
   flex-wrap: wrap;
 }
 
-.details .price .right-half {
+.details .price__right-half {
   display: flex;
   align-items: center;
   flex-wrap: wrap-reverse;
 }
 
-.details .price .count {
+.details .price__count {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -76,7 +76,7 @@
   box-sizing: border-box;
 }
 
-.details .price .count .differ {
+.details .price__differ {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -86,7 +86,7 @@
   border-style: none solid;
 }
 
-.details .price .count .ammount {
+.details .price__ammount {
   font-weight: 400;
   font-size: 24px;
   line-height: 28px;
@@ -105,7 +105,7 @@
   margin-right: 16px;
 }
 
-.details .price .favorite {
+.details .price__favorite {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -123,13 +123,14 @@
   .details {
     flex-direction: column;
     margin: 0px;
+    padding: 0px;
   }
 
   .details .photo {
     align-self: center;
     transition: 0.5s width;
     box-sizing: border-box;
-    margin: 16px 0px;
+    margin: 0px 0px 16px;
     width: 375px;
     height: 200px;
     border: 0px;
@@ -148,7 +149,7 @@
     margin: 0px 24px;
   }
 
-  .details .info .subtitle {
+  .details .info__subtitle {
     margin-top: 16px;
   }
 
@@ -156,16 +157,16 @@
     justify-content: space-between;
   }
 
-  .details .price .left-half {
+  .details .price__left-half {
     box-sizing: border-box;
   }
 
-  .details .price .right-half {
+  .details .price__right-half {
     height: 98px;
     box-sizing: border-box;
   }
 
-  .details .price .count {
+  .details .price__count {
     width: 140px;
   }
 }
@@ -178,17 +179,17 @@
 }
 
 @media (max-width: 500px) {
-  .details .price .right-half {
+  .details .price__right-half {
     justify-content: end;
     align-items: flex-start;
   }
 
-  .details .price .favorite {
+  .details .price__favorite {
     align-items: center;
     margin: 0px;
   }
 
-  .details .price .count {
+  .details .price__count {
     margin-top: 16px;
   }
 

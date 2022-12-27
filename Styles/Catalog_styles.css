@@ -12,7 +12,7 @@
   border-radius: 10px;
 }
 
-.item .favorite {
+.item__favorite {
   display: flex;
   flex-direction: row-reverse;
   align-items: center;
@@ -20,23 +20,24 @@
   padding: 8px 8px 0px 0px;
 }
 
-.item .info * {
+.item__info * {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.item .info .photo {
+.item__photo {
   justify-content: center;
   margin-top: 8px;
   height: 140px;
 }
 
-.item .info .photo img {
+.item__photo img {
   width: 59px;
 }
 
-.item .info .name {
+.item__name {
+  margin: 0px;
   justify-content: center;
   height: 40px;
   font-weight: 400;
@@ -44,7 +45,8 @@
   line-height: 21px;
 }
 
-.item .info .price {
+.item__price {
+  margin: 0px;
   justify-content: center;
   height: 20px;
   text-align: center;

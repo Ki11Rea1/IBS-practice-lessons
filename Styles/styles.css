@@ -19,20 +19,20 @@ body {
   justify-content: space-between;
 }
 
-.header .searchField {
+.header .search-field {
   display: flex;
   align-items: center;
   width: 300px;
   height: 40px;
 }
 
-.header .searchField:hover {
+.header .search-field:hover {
   transition: 0.5s background-color;
   background: var(--bg-color);
   box-shadow: 2px 2px 5px var(--shadow-color);
 }
 
-.header .searchIcon {
+.header .search-field__search-icon {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -40,46 +40,49 @@ body {
   height: 24px;
 }
 
-.header .searchInput {
+.header .search-field__search-input {
+  background-color: transparent;
   margin-left: 8px;
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
   line-height: 16px;
+  border: 0px;
+  outline: none;
 }
 
-.header .navIcons {
+.header .nav-icons {
   display: flex;
 }
 
-.header .navIcons * {
+.header .nav-icons * {
   display: flex;
   width: 20px;
   height: 20px;
 }
 
-.header .navIcons .cart:hover {
+.header .nav-icons__cart:hover {
   transition: 0.5s background-color;
   background: var(--bg-color-darker);
   box-shadow: 2px 2px 5px var(--shadow-color);
   border-radius: 2px;
 }
 
-.header .navIcons .account:hover {
+.header .nav-icons__account:hover {
   transition: 0.5s background-color;
   background: var(--bg-color-darker);
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.15);
   border-radius: 2px;
 }
 
-.header .navIcons .cart {
+.header .nav-icons__cart {
   justify-content: center;
   align-items: center;
   width: 24px;
   height: 24px;
 }
 
-.header .navIcons .account {
+.header .nav-icons__account {
   align-items: center;
   justify-content: center;
   width: 24px;
