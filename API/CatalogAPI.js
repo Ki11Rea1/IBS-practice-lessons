@@ -7,7 +7,7 @@ const getData = async () => {
 
   for (key in content.content) {
     catalog.innerHTML += `
-    <div class="item">
+    <div class="item" id=${content.content[key].id}>
         <div class="item__favorite">
           <svg
             width="20"
