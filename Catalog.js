@@ -1,13 +1,13 @@
-const getData = async () => {
-  let response = await fetch("http://localhost:3006/item");
-  let content = await response.json();
+import { getData } from "./API/GetCatalogData";
 
+const renderCatalog = () => {
   let catalog = document.querySelector(".catalog");
-  console.log(content);
 
-  for (key in content.content) {
+  let content = getData();
+
+  for (key in content) {
     catalog.innerHTML += `
-    <div class="item" id=${content.content[key].id}>
+    <div class="item" id=${content[key].id}>
         <div class="item__favorite">
           <svg
             width="20"
@@ -24,21 +24,17 @@ const getData = async () => {
         </div>
         <div class="item__info">
           <div class="item__photo">
-            <img src="http://localhost:3006/picture/min/:pictureId" />
+            <img 
+            src=${content[key].picture.path} 
+            alt=${content[key].picture.alt}
+            />
           </div>
-          <p class="item__name">${content.content[key].name}</p>
+          <p class="item__name">${content[key].name}</p>
           <p class="item__price">${
-            content.content[key].price.value +
-            " " +
-            content.content[key].price.currency
+            content[key].price.value + " " + content[key].price.currency
           }</p>
         </div>
       </div>`;
   }
-
-  /*
-
- */
 };
-
-getData();
+renderCatalog();

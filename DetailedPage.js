@@ -1,27 +1,28 @@
-const getItem = async (id) => {
-  let response = await fetch(`http://localhost:3006/item/:${id}`);
-  let content = await response.json();
+import { getItem } from "./API/GetDetailedPageData";
 
+const renderDetailedPage = () => {
   let details = document.querySelector(".details");
-  console.log(content);
+
+  let url = new URL(location.href);
+  let content = getItem(url.searchParams.get("id"));
 
   details.innerHTML = `
   <div class="photo">
-        <img src="./Assets/G_home.png" />
+        <img src=${content.picture.path} alt=${content.picture.alt}/>
       </div>
       <div class="info">
-        <p class="info__title">${content.content.name}</p>
+        <p class="info__title">${content.name}</p>
         <p class="info__description">
-          ${content.content.description}
+          ${content.description}
         </p>
         <p class="info__subtitle">Details</p>
         <p class="info__description">
-        ${content.content.details}
+        ${content.details}
         </p>
         <div class="price">
           <div class="price__left-half">
             <p class="price__summ">${
-              content.content.price.value + " " + content.content.price.currency
+              content.price.value + " " + content.price.currency
             }</p>
             <div class="price__count">
               <div class="price__differ">-</div>
@@ -50,4 +51,4 @@ const getItem = async (id) => {
       </div>`;
 };
 
-getItem("571fc60d-ea2c-469e-a5b6-c229d31f195d");
+renderDetailedPage();
