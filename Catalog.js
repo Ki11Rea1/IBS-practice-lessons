@@ -1,7 +1,5 @@
 import { GetCatalogData } from "./API/GetCatalogData";
 
-const API_URL = "http://localhost:3006/item/";
-
 const renderCatalog = async () => {
   let catalog = document.querySelector(".catalog");
 
