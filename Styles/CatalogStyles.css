@@ -10,6 +10,8 @@
   height: 272px;
   margin: 8px;
   border-radius: 10px;
+  text-decoration: none;
+  color: black;
 }
 
 .item__favorite {
@@ -37,6 +39,7 @@
 }
 
 .item__name {
+  text-align: center;
   margin: 0px;
   justify-content: center;
   height: 40px;
