@@ -1,3 +1,4 @@
+import { API_URL } from "./API/constants.js";
 import { GetDetailedPageData } from "./API/GetDetailedPageData.js";
 
 const renderDetailedPage = async () => {
@@ -8,7 +9,7 @@ const renderDetailedPage = async () => {
 
   details.innerHTML = `
   <div class="photo">
-        <img src=${content.picture.path} alt=${content.picture.alt}/>
+        <img src=${API_URL}${content.picture.path} alt=${content.picture.alt}/>
       </div>
       <div class="info">
         <p class="info__title">${content.name}</p>

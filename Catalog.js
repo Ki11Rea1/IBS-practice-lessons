@@ -1,3 +1,4 @@
+import { API_URL } from "./API/constants.js";
 import { GetCatalogData } from "./API/GetCatalogData.js";
 
 const renderCatalog = async () => {
@@ -25,7 +26,7 @@ const renderCatalog = async () => {
         <div class="item__info">
           <div class="item__photo">
             <img 
-            src=${item.picture.path} 
+            src=${API_URL}${item.picture.path} 
             alt=${item.picture.alt}
             />
           </div>
