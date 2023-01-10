@@ -1,13 +1,14 @@
-import { getData } from "./API/GetCatalogData";
+import { GetCatalogData } from "./API/GetCatalogData";
 
-const renderCatalog = () => {
+const renderCatalog = async () => {
   let catalog = document.querySelector(".catalog");
 
-  let content = getData();
+  let content = await GetCatalogData();
 
   for (key in content) {
+    let item = content[key];
     catalog.innerHTML += `
-    <div class="item" id=${content[key].id}>
+    <div class="item" id=${item.id}>
         <div class="item__favorite">
           <svg
             width="20"
@@ -25,13 +26,13 @@ const renderCatalog = () => {
         <div class="item__info">
           <div class="item__photo">
             <img 
-            src=${content[key].picture.path} 
-            alt=${content[key].picture.alt}
+            src=${item.picture.path} 
+            alt=${item.picture.alt}
             />
           </div>
-          <p class="item__name">${content[key].name}</p>
+          <p class="item__name">${item.name}</p>
           <p class="item__price">${
-            content[key].price.value + " " + content[key].price.currency
+            item.price.value + " " + item.price.currency
           }</p>
         </div>
       </div>`;

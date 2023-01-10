@@ -1,10 +1,10 @@
-import { getItem } from "./API/GetDetailedPageData";
+import { GetDetailedPageData } from "./API/GetDetailedPageData";
 
-const renderDetailedPage = () => {
+const renderDetailedPage = async () => {
   let details = document.querySelector(".details");
 
   let url = new URL(location.href);
-  let content = getItem(url.searchParams.get("id"));
+  let content = await GetDetailedPageData(url.searchParams.get("id"));
 
   details.innerHTML = `
   <div class="photo">
