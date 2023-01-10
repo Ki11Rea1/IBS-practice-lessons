@@ -1,4 +1,4 @@
-import { GetCatalogData } from "./API/GetCatalogData";
+import { GetCatalogData } from "./API/GetCatalogData.js";
 
 const renderCatalog = async () => {
   let catalog = document.querySelector(".catalog");

@@ -1,4 +1,4 @@
-import { GetDetailedPageData } from "./API/GetDetailedPageData";
+import { GetDetailedPageData } from "./API/GetDetailedPageData.js";
 
 const renderDetailedPage = async () => {
   let details = document.querySelector(".details");
