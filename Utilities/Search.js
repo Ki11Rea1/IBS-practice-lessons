@@ -1,3 +1,5 @@
+import { debounce } from "./debounce.js";
+
 const searchInput = document.querySelector(".search-field__search-input");
 function searchName() {
   let val = searchInput.value.trim().toLowerCase();
@@ -16,13 +18,5 @@ function searchName() {
     });
   }
 }
-
-const debounce = (callback, delay) => {
-  let timeout;
-  return function () {
-    clearTimeout(timeout);
-    timeout = setTimeout(callback, delay);
-  };
-};
 
 searchInput.addEventListener("keyup", debounce(searchName, 1000));
