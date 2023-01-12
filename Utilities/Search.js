@@ -2,8 +2,8 @@ import { debounce } from "./debounce.js";
 
 const searchInput = document.querySelector(".search-field__search-input");
 function searchName() {
-  let val = searchInput.value.trim().toLowerCase();
-  let searchedItems = document.querySelectorAll(".item");
+  const val = searchInput.value.trim().toLowerCase();
+  const searchedItems = document.querySelectorAll(".item");
   if (val != "") {
     searchedItems.forEach(function (item) {
       if (item.innerText.toLowerCase().search(val) == -1) {

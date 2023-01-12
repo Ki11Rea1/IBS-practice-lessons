@@ -1,7 +1,7 @@
-import { API_URL } from "../API/constants.js";
-import { GetCatalogData } from "../API/GetCatalogData.js";
-import "../Styles/styles.css";
-import "../Styles/CatalogStyles.css";
+import { API_URL } from "@api/constants.js";
+import { GetCatalogData } from "@api/GetCatalogData.js";
+import "@styles/styles.css";
+import "@styles/CatalogStyles.css";
 
 const renderCatalog = async () => {
   let catalog = document.querySelector(".catalog");

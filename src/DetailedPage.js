@@ -1,6 +1,6 @@
-import { API_URL } from "../API/constants.js";
-import { GetDetailedPageData } from "../API/GetDetailedPageData.js";
-import "../Styles/DetailedPageStyles.css";
+import { API_URL } from "@api/constants.js";
+import { GetDetailedPageData } from "@api/GetDetailedPageData.js";
+import "@styles/DetailedPageStyles.css";
 
 const renderDetailedPage = async () => {
   let details = document.querySelector(".details");
