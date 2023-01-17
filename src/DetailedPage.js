@@ -1,5 +1,5 @@
 import { API_URL } from "@api/constants.js";
-import { GetDetailedPageData } from "@api/GetDetailedPageData.js";
+import { GetDetailedPageData } from "@api/api.js";
 import "@styles/DetailedPageStyles.css";
 
 const renderDetailedPage = async () => {

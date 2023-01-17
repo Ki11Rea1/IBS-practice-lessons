@@ -1,5 +1,5 @@
 import { API_URL } from "@api/constants.js";
-import { GetCatalogData } from "@api/GetCatalogData.js";
+import { GetCatalogData } from "@api/api.js";
 import "@styles/styles.css";
 import "@styles/CatalogStyles.css";
 
