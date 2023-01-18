@@ -1,12 +1,12 @@
 import { API_URL } from "@api/constants.js";
-import { GetDetailedPageData } from "@api/api.js";
+import { getDetailedPageData } from "@api/api.js";
 import "@styles/DetailedPageStyles.css";
 
 const renderDetailedPage = async () => {
   let details = document.querySelector(".details");
 
   let url = new URL(location.href);
-  let content = await GetDetailedPageData(url.searchParams.get("id"));
+  let content = await getDetailedPageData(url.searchParams.get("id"));
 
   details.innerHTML = `
   <div class="photo">
