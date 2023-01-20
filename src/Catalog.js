@@ -1,12 +1,12 @@
 import { API_URL } from "@api/constants.js";
-import { GetCatalogData } from "@api/GetCatalogData.js";
+import { getCatalogData } from "@api/getCatalogData.js";
 import "@styles/styles.css";
 import "@styles/CatalogStyles.css";
 
 const renderCatalog = async () => {
   let catalog = document.querySelector(".catalog");
 
-  let content = await GetCatalogData();
+  let content = await getCatalogData();
 
   for (let key in content) {
     let item = content[key];
